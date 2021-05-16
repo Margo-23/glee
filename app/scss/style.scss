@@ -3,6 +3,73 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  padding: 48px 0 45px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu{
+  
+  &__list{
+    display: flex;
+  }
+  &__list-item + .menu__list-item{
+    padding-left: 30px;    
+  }
+  &__list-link{
+    color: #436372;
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-500;
+  }
+}
+
+.user-nav{
+  display: flex;
+  align-items: center;
+  &__link-search{
+    padding-right: 38px;
+  }
+  &__link-circle{
+    height: 50px;
+    width: 50px;
+    padding-left: 18px;
+    background-color: $accent;
+    border-radius: 50%;
+    padding: 15px;
+    margin-top: -5px;
+    
+  }
+  &__wrapper{
+    background-image: url('../images/wrapper-bg.png');
+    height: 51px;
+    width: 178px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20px;
+  }
+  &__link{
+    position: relative;
+
+  }
+  &__num{
+    position: absolute;
+    top: -7px;
+    right: -9px;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 16px;
+    color: #243f4d;
+  }
+  }
 
 
 @import 'media';
