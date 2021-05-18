@@ -117,9 +117,115 @@
   &__num-left{
     right: 20px;
   }
+  }
 
+  .footer-top{
+    padding: 80px 0 75px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dae4e9;
+    & .logo__img{
+      margin-bottom: 27px;
+      margin-top: 7px;
+    }
+    &__item{      
+      max-width: 270px;
+      // &:nth-child(1){
+      //   max-width: 200px;
+      //   margin-right: 70px;
+      // }
+    }
 
+    &__adress,
+    &__phone,
+    &__email{
+      color: $default;
+      @extend %rubik-400;
+      font-size: 14px;
+      line-height: 32px;
+      display: block;
+      margin-bottom: 10px;
+      & span{
+        text-transform: uppercase;
+      }
+    }
+    &__adress{
+      max-width: 200px;
+    }
+    &__link{
+      color: $default;
+      @extend %rubik-400;
+      font-size: 14px;
+      line-height: 32px;
+    }
+    &__title{
+      text-transform: uppercase;
+      padding-top: 20px;
+      color: #1f2044;
+      @extend %sans-700;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 700;
+      margin-bottom: 27px;
+    }
+    &__text{
+      margin-bottom: 40px;
+    }
+    &__form{
+      display: flex;
+    }
+    &__form-input{
+      border: none;
+      background-color: #fef7f0;
+      width: 170px;
+      height: 38px;
+      padding:0 16px;
+      box-shadow: 0 7px 20px 0 rgba($color: #234969, $alpha: 0.3);
+      &::placeholder{
+        color: #234969;
+        font-size: 12px;
+      }
+    }
+    &__form-btn{
+      width: 100px;
+      height: 38px;
+      background-color: $accent;
+      border: none;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 21px;
+      box-shadow: 0 7px 20px 0 rgba($color: #234969, $alpha: 0.3);
+    }
+  }
 
+  .footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 40px;    
+    &__menu{
+      display: flex;
+      justify-content: space-between;
+      height: 20px;
+      &-item{
+        margin-right: 16px;
+        display: flex;
+        align-items: center;
+        height: 20px;
+      }
+      &-item + &-item{
+        padding-left: 16px;
+        border-left: 1px solid $default;
+      }
+      &-link{
+        color: $default;
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 32px;
+      }
+    }
   }
 
 
