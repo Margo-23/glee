@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header{
@@ -24,6 +25,7 @@
     font-size: 15px;
     line-height: 12px;
     @extend %rubik-500;
+    padding: 0 2px;
     border: 1px solid transparent;
     transition: all .3s;
     &:hover{
@@ -111,7 +113,7 @@
     text-align: center;
     font-size: 10px;
     line-height: 16px;
-    color: #243f4d;
+    color: $titlegreen;
   }
 
   &__num-left{
@@ -126,14 +128,10 @@
     border-bottom: 1px solid #dae4e9;
     & .logo__img{
       margin-bottom: 27px;
-      margin-top: 7px;
+      margin-top: 3px;
     }
     &__item{      
       max-width: 270px;
-      // &:nth-child(1){
-      //   max-width: 200px;
-      //   margin-right: 70px;
-      // }
     }
 
     &__adress,
@@ -228,5 +226,103 @@
     }
   }
 
+.about__slider{
+  background-color: #fcd7b6;
+  padding-top: 220px;
+  z-index: 11;
+  &::after{
+    z-index: -1;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+  width: 634px;
+  height: 634px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 182px;
+    background: linear-gradient(88deg, rgba(255, 255, 255, 0), #fffcfa);
+  }
+}
+
+
+
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+   & button{
+     width: 30px;
+     height: 30px;
+     @extend %rubik-500;
+     font-size: 11px;
+     line-height: 9px;
+     border: none;
+     border-radius: 50%;
+     background-color: #fde3cc;
+     color: #667983;
+     margin-right: 12px;
+     margin-bottom: 40px;
+     transition: all .3s;
+     }
+     & .slick-active button{
+      background-color: #ffffff;
+     }
+  
+  } 
+
+.about__item{
+  z-index: 10;
+  &-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 207px;
+    
+  }
+  &-info{
+    margin-right: 120px;
+  }
+  &-title{
+    max-width: 445px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: $titlegreen;
+    margin-bottom: 40px;
+  }
+  &-text{
+    max-width: 370px;
+    color: #436372;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+  &-link{
+    display: inline-block;
+    padding: 21px 100px 21px 28px;
+    background-color: $accent ;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      background-image: url('../images/arrow.png');
+      height: 9px;
+      width: 22px;
+      top: 23px;
+      right: 16px;
+    }    
+  }
+}  
+
+
+
 
 @import 'media';
+
+
+
+
