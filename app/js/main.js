@@ -8,5 +8,7 @@ fade: true,
 autoplay: true,
 autoplaySpeed: 2000,
 });
+
+
 });
 

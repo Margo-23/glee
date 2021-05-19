@@ -32,3 +32,10 @@ $titlegreen: #243f4d;
   font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
 }
+
+%title{
+  color: $title;
+  font-size: 36px;
+  @extend %sans-700;
+  margin-bottom: 35px;
+}
