@@ -13,7 +13,8 @@
 }
 
 .menu{
-  
+  margin: 0 auto;
+  margin-left: 475px;
   &__list{
     display: flex;
   }
@@ -536,8 +537,7 @@ ul.design__items{
 }
 
 .news{
-  padding-top: 115px;
-  
+  padding-top: 115px;  
   &__top{
     margin: 0 auto;
     width: 1170px;
@@ -570,6 +570,8 @@ ul.design__items{
   &__img{
     height: 250px;
     margin-bottom: 35px;
+    position: relative;
+
   }
   &__btn{
     display: none;
@@ -581,6 +583,20 @@ ul.design__items{
     width: 315px;
     min-height: 201px;
     position: relative;
+    &::after{
+      position: absolute;
+      content: "NEWS";
+      background-color: $accent;
+      color: #e6edf0;
+      text-transform: uppercase;
+      width: 100px;
+      height: 30px;
+      @extend %sans-700;
+      top: -52px;
+      left: -2px;
+      border-radius: 15px 15px;
+      text-align: center;
+    }
   }
   &__link{
     font-size: 18px;
@@ -727,6 +743,42 @@ ul.partners__inner{
     font-size: 18px;
   }
 
+}
+
+.terms{  
+  width: 1200px;
+  margin: 0 auto;
+  @extend %rubik-400;
+  color: $titlegreen;
+  font-size: 16px;
+  line-height: 30px;
+  &__info{
+    margin-top: 145px;
+  }
+  &__info + .terms__info{
+    margin-top: 70px;
+  }
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+  &__list{
+    counter-reset: myCounter;
+  }
+  &__item{
+    list-style: none;
+    margin:0 0 30px 40px;
+    position: relative;
+  &::before{
+    position: absolute;
+    counter-increment: myCounter;
+    content:counter(myCounter) ".";
+    color: $titlegreen;
+    left: -30px;
+  }  
+  }
 }
 
 
