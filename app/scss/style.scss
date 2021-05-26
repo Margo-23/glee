@@ -628,8 +628,106 @@ ul.partners__inner{
   padding: 0;
 }
 
+.page-title{
+  text-align: center;
+  @extend %rubik-300;
+  font-size: 36px;
+  line-height: 36px;
+  color: #222933;
+}
 
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  &__list{
+    display: flex;
 
+  }
+  &__item{
+    color: rgba(34, 41, 51, 0.6);
+    padding: 5px 20px 0 0;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: "/";
+      color: rgba(34, 41, 51, 0.6);
+      right: 10px;
+    }
+    &:last-child{
+      color: $default;
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: inherit;
+  }
+}
+
+.login{
+  color: #436372;
+  padding: 30px 0 200px;
+  @extend %rubik-400;
+  font-size: 14px;
+  &__form{
+    max-width: 470px;
+    padding: 120px 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__input{
+    padding: 0 10px 0 1px;
+    border: none;
+    width: 100%;
+    display: block;
+    height: 60px;
+    margin-bottom: 60px;
+    font-size: 16px;
+    line-height: 30px;
+    &::placeholder{
+      @extend %rubik-400;
+      color: #436372;      
+    }
+  }
+  &__btn{
+    margin: 20px 0 35px;
+    min-width: 100%;
+    border: none;
+    background-color: $accent;
+    padding: 22px 125px;
+    color: #fffefe;
+    @extend %rubik-500;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  &__info{
+    margin-bottom: 65px;
+    display: flex;
+    justify-content: space-between
+  }
+  &__lost-link{
+    color: #436372;
+  }
+  &__text{
+    margin-bottom: 25px;
+  }
+  &__link-registration{
+    display: block;
+    min-width: 100%;
+    padding: 20px 153px;
+    border: 2px solid $accent;
+    color: $titlegreen;
+    @extend %rubik-500;
+    font-size: 18px;
+  }
+
+}
 
 
 
