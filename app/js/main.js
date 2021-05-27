@@ -9,6 +9,23 @@ autoplay: true,
 autoplaySpeed: 2000,
 });
 
+$(".catalog-price__input").ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    
+    onStart: function (data) {
+        $(".catalog-price__from").text("$"+ data.from + ".00");
+        $(".catalog-price__to").text("$"+ data.to + ".00");
+    },
+    onChange: function (data) {
+        $(".catalog-price__from").text("$"+ data.from + ".00");
+        $(".catalog-price__to").text("$"+ data.to + ".00");
+    },
+    postfix: ".00",
+
+});
+
+
     //mixitup
     let containerEl1 = document.querySelector('.products');
     let containerEl2 = document.querySelector('.design');

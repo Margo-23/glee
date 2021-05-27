@@ -780,6 +780,84 @@ ul.partners__inner{
   }  
   }
 }
+.filter__title{
+  text-transform: uppercase;
+  @extend %sans-700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $titlegreen;
+  display: inline-block;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: '';
+    background-color: $accent;
+    width: 38px;
+    height: 2px;
+    top: 8px;
+    right: -51px;
+  }
+}
+
+.catalog{
+  &__inner{
+    width: 1170px;
+    margin: 0 auto;
+    padding: 145px 0 110px;
+    display: flex;
+  }
+  &__filters{
+    width: 270px;
+    margin-right: 30px;
+  }
+  &-category{
+    padding-bottom: 70px;
+  }
+}
+
+.catalog-price{
+  padding-bottom: 80px;
+  &__form{
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    color: $titlegreen;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 43px;
+  }
+}
+
+.irs--flat{
+  .irs-line {
+    height: 1px;
+    background-color: $accent;
+    border-radius: 0;
+  }
+  .irs-bar {
+    height: 3px;
+    background-color: $accent;
+  }
+  .irs-handle>i:first-child {
+    width: 15px;
+    height: 100%;
+    transform: translateY(-30%);
+    background-color: $accent;
+}
+
+ .irs-min, .irs-max, .irs-from, .irs-to, .irs-single {
+  display: none;
+  }
+} 
+
+
+
+
+
+
 
 
 
