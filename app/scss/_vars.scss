@@ -3,6 +3,11 @@ $accent: #a3bbc8;
 $title: #191919;
 $titlegreen: #243f4d;
 
+%rubik-300{
+  font-family: 'Rubik-Ligth', sans-serif;
+  font-weight: 300;
+}
+
 %rubik-400{
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
@@ -33,11 +38,21 @@ $titlegreen: #243f4d;
   font-weight: 700;
 }
 
+
+
 %title{
   color: $title;
   font-size: 36px;
   @extend %sans-700;
   margin-bottom: 35px;
+}
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
 }
 
 @function max($numbers...){
