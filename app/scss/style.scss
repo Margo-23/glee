@@ -853,6 +853,88 @@ ul.partners__inner{
   }
 } 
 
+.catalog-category{
+  &__form{
+    padding-top: 40px;
+    padding-left: 15px;
+  }
+  &__label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    @extend %rubik-400;
+    line-height: 43px;
+    color: $titlegreen;
+    position: relative;
+    & + .catalog-category__label{
+      margin-top: 10px;
+    }
+    &--active{
+      background-color: #dae4eb;
+    }
+  }
+  &__input{
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    position: absolute;
+    &:checked + .catalog-category__checkbox{
+      transform: rotate(90deg);
+    }
+  }
+  &__checkbox{
+    background-image: url("../images/icons/littleArrow.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-width: 11px;
+    min-height: 11px;
+    position: absolute;
+    margin-left: -16px;
+    margin-top: -6px;
+  }
+
+}
+
+.catalog-brand{
+  &__form{
+    padding-top: 40px;
+    padding-left: 15px;
+    margin-bottom: 60px;
+  }
+  &__label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    @extend %rubik-400;
+    line-height: 43px;
+    color: $titlegreen;
+    position: relative;
+    & + .catalog-brand__label{
+      margin-top: 10px;
+    }
+    &--active{
+      background-color: #dae4eb;
+    }
+  }
+  &__input{
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    position: absolute;
+    &:checked + .catalog-brand__num{
+      color: $titlegreen;
+    }
+  }
+  &__num{
+    color: #b3b3b3;
+  }
+
+}
+
 
 
 

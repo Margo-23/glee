@@ -25,6 +25,13 @@ $(".catalog-price__input").ionRangeSlider({
 
 });
 
+$(".catalog-category__input").click(function(e){
+    $(this).parents("label").toggleClass('catalog-category__label--active');
+});
+$(".catalog-brand__input").click(function(e){
+    $(this).parents("label").toggleClass('catalog-brand__label--active');
+});
+
 
     //mixitup
     let containerEl1 = document.querySelector('.products');
