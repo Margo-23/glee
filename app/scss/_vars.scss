@@ -47,6 +47,14 @@ $titlegreen: #243f4d;
   margin-bottom: 35px;
 }
 
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+}
+
 @function max($numbers...){
     @return m#{a}x(#{$numbers});
 }

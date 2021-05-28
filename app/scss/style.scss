@@ -807,12 +807,23 @@ ul.partners__inner{
     display: flex;
   }
   &__filters{
-    width: 270px;
-    margin-right: 30px;
+    min-width: 270px;
+    margin-right: 45px;
   }
   &-category{
     padding-bottom: 70px;
   }
+  &__content{
+    width: 855px;
+  }
+}
+
+.products__items-list1{
+  display: grid;
+  grid-template-columns: repeat(3, 271px);
+  grid-column-gap: 22px;
+  grid-row-gap: 120px;
+
 }
 
 .catalog-price{
@@ -875,11 +886,7 @@ ul.partners__inner{
     }
   }
   &__input{
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    position: absolute;
+    @extend %checkbox-hidden;
     &:checked + .catalog-category__checkbox{
       transform: rotate(90deg);
     }
@@ -920,11 +927,7 @@ ul.partners__inner{
     }
   }
   &__input{
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    position: absolute;
+    @extend %checkbox-hidden;
     &:checked + .catalog-brand__num{
       color: $titlegreen;
     }
@@ -934,7 +937,37 @@ ul.partners__inner{
   }
 
 }
-
+.catalog-recent{
+  
+  &__items{
+    padding-top: 35px;
+  }
+  &__item{
+    display: flex;
+    margin:0 0 30px 10px;
+  }
+  &__img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @extend %rubik-400;
+    line-height: 16px;
+    color: #333333;
+  }
+  &__name{
+    padding-top: 5px;
+    font-size: 14px;
+  }
+  &__price{
+    font-size: 15px;
+  }
+}
 
 
 

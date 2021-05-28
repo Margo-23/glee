@@ -25,6 +25,17 @@ $(".catalog-price__input").ionRangeSlider({
 
 });
 
+ 
+    $(".catalog-recent__rateYo").rateYo({
+      rating: 4,
+      starWidth: "11px",
+      ratedFill: "#ffcc00",
+      readOnly: true,
+      spacing: "5px"
+    });
+   
+
+
 $(".catalog-category__input").click(function(e){
     $(this).parents("label").toggleClass('catalog-category__label--active');
 });
