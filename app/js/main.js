@@ -33,6 +33,14 @@ $(".catalog-price__input").ionRangeSlider({
       readOnly: true,
       spacing: "5px"
     });
+
+    $(".products2__rateYo").rateYo({
+        rating: 4,
+        starWidth: "18px",
+        ratedFill: "#ffcc00",
+        readOnly: true,
+        spacing: "5px"
+      });
    
 
 
@@ -41,6 +49,11 @@ $(".catalog-category__input").click(function(e){
 });
 $(".catalog-brand__input").click(function(e){
     $(this).parents("label").toggleClass('catalog-brand__label--active');
+});
+
+$(".products2__item-btn").click(function(e){
+    $(this).css( "display", "none" );
+    $(this).next(".products2__item-links").css( "display", "flex" );
 });
 
 

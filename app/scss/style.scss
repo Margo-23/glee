@@ -969,7 +969,85 @@ ul.partners__inner{
   }
 }
 
+ul.products2__items{
+margin-top: 25px;
+}
+.products2__item{
+  &-img{
+    object-fit: contain;
+  }
+  display: flex;
+  justify-content: space-between;
+  width: 870px;
+  margin-bottom: 150px;
+  padding-top: 50px;
+  &-info{
+    width: 470px;
+  }
+  &-name{
+    color: #333333;
+    @extend %rubik-400;
+    font-size: 40px;
+    line-height: 27px;
+    display: block;
+    margin-bottom: 25px;
+  }
+  &-price{
+    color: #333333;
+    @extend %rubik-400;
+    font-size: 30px;
+    line-height: 45px;
+    margin: 30px 0;
+  }
+  &-text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $titlegreen;
+    margin-bottom: 32px;
+    padding-right: 20px;
+  }
+  &-btn{
+    background-color: $accent;
+    color: #fff;
+    height: 60px;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    @extend %rubik-400;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    // display: none;
+  }
+  &-links{
+    display: none;
+    height: 60px;
+    // display: flex;
+    align-items: flex-end;
+  }
+  &-link{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    &--active{
+      background-color: $accent;
+      & svg path{
+        fill: #fff;
+      }
+    }
+  }
 
+  &-basket svg,
+  &-heart svg{
+    
+  }
+}
 
 
 
