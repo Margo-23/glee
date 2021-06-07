@@ -56,7 +56,7 @@ $(".catalog-price__input").ionRangeSlider({
       starWidth: "11px",
       ratedFill: "#ffcc00",
       readOnly: true,
-      spacing: "5px"
+      spacing: "5px",
     });
 
     $(".products2__rateYo").rateYo({
@@ -72,6 +72,7 @@ $(".catalog-price__input").ionRangeSlider({
         ratedFill: "#ffcc00",
         readOnly: true,
         spacing: "15px"
+        
       });  
    
 
