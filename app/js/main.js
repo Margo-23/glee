@@ -9,6 +9,8 @@ autoplay: true,
 autoplaySpeed: 2000,
 });
 
+$('.product-item__num').styler();
+
 $('.product-slide__thumb').slick({
     asNavFor: '.product-slide__big',
     arrows: false,
@@ -23,6 +25,13 @@ $('.product-slide__big').slick({
     arrows: false,
     draggable: false,
     fade: true,
+});
+
+$('.related__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $('.related__btn-prew'),
+    nextArrow: $('.related__btn-next'),
 });
 
 $(".catalog-price__input").ionRangeSlider({
@@ -82,6 +91,14 @@ $(".products2__item-btn").on('click',function(e){
 $(".pagination__link").on('click',function(e){
     $('.pagination__link').removeClass('pagination__link--active');
     $(this).addClass('pagination__link--active');
+});
+
+$(".product-tabs__top-item").on('click',function(e){
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
 });
 
 

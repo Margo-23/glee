@@ -574,16 +574,6 @@ ul.design__items{
 
   }
   &__btn{
-    display: none;
-  }
-  &__link-box{
-    background-color: #fff;
-    padding: 0 45px 18px 5px;
-    margin: 0 auto 20px;
-    width: 315px;
-    min-height: 201px;
-    position: relative;
-    &::after{
       position: absolute;
       content: "NEWS";
       background-color: $accent;
@@ -593,10 +583,32 @@ ul.design__items{
       height: 30px;
       @extend %sans-700;
       top: -52px;
-      left: -2px;
+        left: -2px;
       border-radius: 15px 15px;
       text-align: center;
-    }
+  }
+  &__link-box{
+    background-color: #fff;
+    padding: 0 45px 18px 5px;
+    margin: 0 auto 20px;
+    width: 315px;
+    min-height: 201px;
+    position: relative;
+    
+    // &::after{
+    //   position: absolute;
+    //   content: "NEWS";
+    //   background-color: $accent;
+    //   color: #e6edf0;
+    //   text-transform: uppercase;
+    //   width: 100px;
+    //   height: 30px;
+    //   @extend %sans-700;
+    //   top: -52px;
+    //   left: -2px;
+    //   border-radius: 15px 15px;
+    //   text-align: center;
+    // }
   }
   &__link{
     font-size: 18px;
@@ -625,6 +637,9 @@ ul.design__items{
     text-transform: uppercase;
     color: #222933;
     @extend %rubik-400;
+  }
+  &__box{
+    position: relative;
   }
 }
 .partners{
@@ -1087,7 +1102,7 @@ margin-top: 25px;
 }
 
 .product-page{
-  padding: 35px 0 100px 0;
+  padding: 35px 0 120px;
 }
 .product-item{
   padding-top: 150px;
@@ -1123,6 +1138,12 @@ margin-top: 25px;
     color: $titlegreen;
     margin-bottom: 30px;
   }
+  &__btn{
+    margin-left: 15px;
+    height: 54px;
+    padding-top: 13px;
+  }
+
 
 }
 .product-info{
@@ -1168,14 +1189,174 @@ margin-top: 25px;
   }
 }
 
+.jq-number__field {
+  height: 54px;
+  border: 1px solid $accent;
+  border-bottom-color: $accent;
+  border-radius: 0;
+  box-shadow: none;
+  width: 150px;
+}
+
+.jq-number__field input {
+  text-align: center;
+  height: 54px;
+}
+
+.jq-number {
+  padding: 0;
+
+}
+
+.jq-number__spin {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 32px;
+  height: 14px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+}
+.jq-number__spin:hover {
+  background: none;
+}
+
+.jq-number__spin:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $titlegreen;
+  width: 8px;
+  height: 1px;
+  border: none;
+
+}
+
+.jq-number__spin.plus{
+  left: auto;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-left:1px solid $accent;
+}
+
+.jq-number__spin.minus{
+  right: auto;
+  width: 50px;
+  height: 50px;
+  border: none;
+  
+  border-right:1px solid $accent;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.jq-number__spin.minus:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $titlegreen;
+  width: 9px;
+  height: 1px;
+  border:none;
+}
+
+.jq-number__spin.plus::before {
+  content: '';
+  position: absolute;
+  top: 21px;
+  left: 24px;
+  background-color: $titlegreen;
+  width: 1px;
+  height: 9px;
+  border:none;
+}
 
 
+.product-tabs{
+  padding-top: 85px;
+  width: 1170px;
+  margin: 0 auto;
+  &__top{
+    display: flex;
+    justify-content: center;
+  }
+  &__top-item{
+    display: block;
+    @extend %rubik-500;
+    width: 240px;
+    padding: 15px 0;
+    font-size: 18px;
+    line-height: 40px;
+    color: $titlegreen;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 5px;
+  }
+  &__top-item--active{
+    color: #fff;
+    background-color: $accent;
+  }
 
+  &__content-item{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $titlegreen;
+    display: none;
+    &.product-tabs__content-item--active{
+      display: block;
+    }
+  }
+}
 
-
+.related{
+  width: 1170px;
+  margin: 0 auto 35px;
+  position: relative;
+  &__btn-box{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__btn-prew,
+  &__btn-next{
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    &:hover{
+      border: 1px solid $accent;
+    }
+  }
+  &__title{
+    padding-top: 10px;
+    color: $titlegreen;
+    font-size: 36px;
+    @extend %sans-700;
+    margin-bottom: 110px;
+  }
+  &__item{
+    max-width: 270px;
+  }
+}
 
 
 @import 'media';
+
 
 
 
