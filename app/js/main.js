@@ -104,7 +104,6 @@ $(".product-tabs__top-item").on('click',function(e){
 
 
 
-
     //mixitup
     let containerEl1 = document.querySelector('.products');
     let containerEl2 = document.querySelector('.design');
