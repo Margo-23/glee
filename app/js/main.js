@@ -9,6 +9,31 @@ autoplay: true,
 autoplaySpeed: 2000,
 });
 
+$('.product-item__num').styler();
+
+$('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    arrows: false,
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+});
+$('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    arrows: false,
+    draggable: false,
+    fade: true,
+});
+
+$('.related__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $('.related__btn-prew'),
+    nextArrow: $('.related__btn-next'),
+});
+
 $(".catalog-price__input").ionRangeSlider({
     type: "double",
     prefix: "$",
@@ -31,17 +56,52 @@ $(".catalog-price__input").ionRangeSlider({
       starWidth: "11px",
       ratedFill: "#ffcc00",
       readOnly: true,
-      spacing: "5px"
+      spacing: "5px",
     });
+
+    $(".products2__rateYo").rateYo({
+        rating: 4,
+        starWidth: "18px",
+        ratedFill: "#ffcc00",
+        readOnly: true,
+        spacing: "5px"
+      });
+
+      $(".product-item__rateYo").rateYo({
+        starWidth: "18px",
+        ratedFill: "#ffcc00",
+        readOnly: true,
+        spacing: "15px"
+        
+      });  
    
 
 
-$(".catalog-category__input").click(function(e){
+$(".catalog-category__input").on('click', function(e){
     $(this).parents("label").toggleClass('catalog-category__label--active');
 });
-$(".catalog-brand__input").click(function(e){
+$(".catalog-brand__input").on('click', function(e){
     $(this).parents("label").toggleClass('catalog-brand__label--active');
 });
+
+$(".products2__item-btn").on('click',function(e){
+    $(this).css( "display", "none" );
+    $(this).next(".products2__item-links").css( "display", "flex" );
+});
+
+$(".pagination__link").on('click',function(e){
+    $('.pagination__link').removeClass('pagination__link--active');
+    $(this).addClass('pagination__link--active');
+});
+
+$(".product-tabs__top-item").on('click',function(e){
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+});
+
 
 
     //mixitup
