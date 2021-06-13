@@ -1,0 +1,13 @@
+.video__popap{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__play{
+    width: 127px;
+    height: 127px;
+  }
+}

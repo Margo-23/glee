@@ -1,0 +1,33 @@
+
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+
+  }
+  &__item{
+    color: rgba(34, 41, 51, 0.6);
+    padding: 5px 20px 0 0;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: "/";
+      color: rgba(34, 41, 51, 0.6);
+      right: 10px;
+    }
+    &:last-child{
+      color: $default;
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: inherit;
+  }
+}

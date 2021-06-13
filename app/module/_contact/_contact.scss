@@ -1,0 +1,108 @@
+.contact{
+  width: 1170px;
+  margin: 0 auto 20px;
+  &__title{
+    color: #222933;
+    text-align: center;
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 24px;
+  }
+  &__info{
+    padding-top: 150px;
+    margin-bottom: 120px;
+    text-align: center;
+  }
+  &__info-subtitle{
+
+@extend %poppins-700;
+color: $accent;
+font-size: 16px;
+line-height: 20px;
+  }
+  &__info-title{
+    @extend %sans-700;
+    color: $titlegreen;
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 75px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    padding: 70px 54px 0 54px;
+    width: 370px;
+    height: 380px;
+    border: 2px solid transparent;
+    transition: all .5s;
+    &:hover{
+      border: 2px solid #436372;
+      & .contact__info-img{
+        background-color: $accent;
+      }
+      & svg path{
+        fill: #fff;        
+      }
+    }
+  }
+  &__info-img{
+    width: 80px;
+    height: 80px;    
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: all .5s;
+  }
+  &__item-title{
+    @extend %sans-700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #222222;
+    margin: 65px 0 22px 0;
+  }
+}
+
+.contact__form{
+  display: flex;
+  &__inner{    
+    width: 600px;
+    margin-right: 70px;
+  }
+  &__email,
+  &__name{
+    border-color: transparent;
+    text-transform: uppercase;
+    width: 280px;
+    margin-bottom: 30px;
+    background-position-y: 50%;
+    background-position-x: 255px;
+  }
+  &__name{
+    margin-right: 35px;
+  }
+
+  &__text{
+    text-transform: uppercase;
+    border-color: transparent;
+    width: 600px;
+    height: 150px;
+    margin-bottom: 40px;
+    background-position-y: 20px;
+    background-position-x: 575px;
+  }
+  &__btn{
+    padding: 18px 45px;
+    border-radius: 5px;
+    margin-bottom: 0;
+  }
+}
+
+#map{
+  width: 500px;
+  height: 335px;
+  
+}

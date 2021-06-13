@@ -20,3 +20,15 @@ flex-direction: column;
   margin: 0 auto;
   padding: 0 15px;
 }
+.page-title{
+  text-align: center;
+  @extend %rubik-300;
+  font-size: 36px;
+  line-height: 36px;
+  color: #222933;
+}
+
+.title{
+  @extend %title;
+  text-align: center;
+}

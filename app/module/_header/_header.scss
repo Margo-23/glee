@@ -1,0 +1,253 @@
+.header{
+  padding: 48px 0 45px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.menu{
+  margin: 0 auto;
+  margin-left: 475px;
+  &__btn{
+    display: none;
+  }
+  &__list{
+    display: flex;
+  }
+  &__list-item + .menu__list-item{
+    padding-left: 30px;    
+  }
+  &__list-link{
+    color: #436372;
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-500;
+    padding: 0 2px;
+    border: 1px solid transparent;
+    transition: all .3s;
+    &:hover{
+      border-bottom: 1px solid #436372;
+    }
+  }
+  
+}
+
+.user-nav{
+  display: flex;
+  align-items: center;
+  &__link-search{
+    height: 50px;
+    width: 50px;
+    background-color: #edf1f4;
+    border-radius: 50%;
+    margin-right: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    &:hover{
+      background-color: $accent;
+    }
+  }
+  &__link-circle{
+    height: 50px;
+    width: 50px;
+    padding-left: 18px;
+    background-color: $accent;
+    border-radius: 50%;
+    padding: 15px;
+    margin-top: -5px;
+    
+  }
+  &__link-left{
+    width: 88px;
+    height: 50px;
+    background: #fcd7b6;
+    border-bottom-left-radius: 50px 50px;
+    border-top-left-radius: 50px 50px;
+    padding: 16px 28px 0 38px;
+    position: relative;
+    transition: all .3s;
+    &:hover{
+      background-color: $accent;
+    }
+
+  }
+
+  &__link-rigth{
+    width: 88px;
+    height: 50px;
+    background: #fcd7b6;
+    border-bottom-right-radius: 50px 50px;
+    border-top-right-radius: 50px 50px;
+    padding: 16px 38px 0 28px;
+    margin-right: 20px;
+    position: relative;
+    transition: all .3s;
+    &:hover{
+      background-color: $accent;
+    }
+    &::before{
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 32px;
+      background-color: #fde7d3;
+      left: 0;
+      top: 9px;
+    }
+  }
+
+  &__num-rigth,
+  &__num-left{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 16px;
+    color: $titlegreen;
+  }
+
+  &__num-left{
+    right: 20px;
+  }
+}
+
+
+@media (max-width: 1600px){
+  .menu{
+    margin-left: 376px;
+  }
+}
+
+
+@media (max-width: 1500px){
+  .menu{
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1100px){
+  .header__inner{
+    align-items: center;
+  }
+  .menu{
+    order: 1;
+    margin: 0;
+    margin:0 30px;
+    &__list{
+      transform: translateY(-200%);
+      position: absolute;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      top: 100px;
+      left: 0;
+      z-index: 100;
+      transition: all .3s;
+      &.menu__list--active{
+        transition: all .3s;
+        transform: translateY(0);
+      }
+      &-link{
+        text-align: center;
+        padding: 20px 0;
+        display: block;
+      }
+      &-item+.menu__list-item {
+        padding-left: 30px;        
+    }
+    &-item{
+      width: 100%;
+      padding: 0 30px;
+    }
+    }
+    &__btn{
+      width: 50px;
+      height: 50px;
+      margin-top: -5px;
+      border-radius: 50%;
+      border: none;
+      background-color: $titlegreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      span{
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+      }
+      &::after,
+      &::before{
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+        content: '';
+      }
+      &::after{
+        bottom: 30%;
+      }
+      &::before{
+        top: 30%;
+      }
+    }
+  }
+  .user-nav{
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 700px){
+  .menu{
+    margin: 0 10px;
+  }
+  .user-nav {
+    justify-content: flex-end;
+    &__link-circle{
+      display: none;
+    }
+    &__link-rigth,
+    &__link-left{
+      width: 60px;
+      padding: 16px 10px 0 10px;
+      margin: 0;
+      background-color: transparent;
+    }
+    &__link-rigth::before{
+      display: none;
+    }
+    &__num-rigth{
+      right: 22px;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .menu{
+    order: 0;
+    &__list{
+      top: 150px;
+
+    }
+    &__btn{
+      margin: 3px 15px 0 0;
+    }
+
+  }
+  .user-nav{
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+}
+

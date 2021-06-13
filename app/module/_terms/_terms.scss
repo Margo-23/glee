@@ -1,0 +1,35 @@
+.terms{  
+  width: 1200px;
+  margin: 0 auto;
+  @extend %rubik-400;
+  color: $titlegreen;
+  font-size: 16px;
+  line-height: 30px;
+  &__info{
+    margin-top: 145px;
+  }
+  &__info + .terms__info{
+    margin-top: 70px;
+  }
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+  &__list{
+    counter-reset: myCounter;
+  }
+  &__item{
+    list-style: none;
+    margin:0 0 30px 40px;
+    position: relative;
+  &::before{
+    position: absolute;
+    counter-increment: myCounter;
+    content:counter(myCounter) ".";
+    color: $titlegreen;
+    left: -30px;
+  }  
+  }
+}

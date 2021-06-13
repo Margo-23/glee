@@ -1,0 +1,97 @@
+.about__slider{
+  background-color: #fcd7b6;
+  padding-top: 220px;
+  z-index: 11;
+  &::after{
+    z-index: -1;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+  width: 634px;
+  height: 634px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 182px;
+    background: linear-gradient(88deg, rgba(255, 255, 255, 0), #fffcfa);
+  }
+}
+
+
+
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+   & button{
+     width: 30px;
+     height: 30px;
+     @extend %rubik-500;
+     font-size: 11px;
+     line-height: 9px;
+     border: none;
+     border-radius: 50%;
+     background-color: #fde3cc;
+     color: #667983;
+     margin-right: 12px;
+     margin-bottom: 40px;
+     transition: all .3s;
+     }
+     & .slick-active button{
+      background-color: #ffffff;
+     }
+  
+  } 
+
+.about__item{
+  z-index: 10;
+  &-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 207px;
+    
+  }
+  &-info{
+    margin-right: 120px;
+  }
+  &-title{
+    max-width: 445px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: $titlegreen;
+    margin-bottom: 40px;
+  }
+  &-text{
+    max-width: 370px;
+    color: #436372;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+  &-link{
+@extend %btn;    
+  }
+}  
+
+.about__benefits{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 47px;
+  & div:nth-child(1){
+    max-width: 285px;
+  }
+  &-item{
+    display: flex;
+    max-width: 300px;
+  }
+  &-icon{
+    margin: 5px 24px auto 0;
+  }
+  &-title{
+    @extend %sans-700;
+    font-size: 18xp;
+    line-height: 30px;
+    color: #414141;
+  }
+}

@@ -1,0 +1,37 @@
+.related{
+  width: 1170px;
+  margin: 0 auto 35px;
+  position: relative;
+  &__btn-box{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__btn-prew,
+  &__btn-next{
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    &:hover{
+      border: 1px solid $accent;
+    }
+  }
+  &__title{
+    padding-top: 10px;
+    color: $titlegreen;
+    font-size: 36px;
+    @extend %sans-700;
+    margin-bottom: 110px;
+  }
+  &__item{
+    max-width: 270px;
+  }
+}

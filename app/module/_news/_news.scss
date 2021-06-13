@@ -1,0 +1,92 @@
+.news{
+  padding-top: 115px;  
+  &__top{
+    margin: 0 auto;
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  &__title{
+    margin: 0;
+  }
+  &__view-link{
+    width: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #262626;
+    @extend %sans-700;
+  }
+  &__items{
+    background-color: #f7f1ea;
+    margin: 0 auto;
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 370px;
+  }
+  &__img{
+    height: 250px;
+    margin-bottom: 35px;
+    position: relative;
+
+  }
+  &__btn{
+      position: absolute;
+      content: "NEWS";
+      background-color: $accent;
+      color: #e6edf0;
+      text-transform: uppercase;
+      width: 100px;
+      height: 30px;
+      @extend %sans-700;
+      top: -52px;
+        left: -2px;
+      border-radius: 15px 15px;
+      text-align: center;
+  }
+  &__link-box{
+    background-color: #fff;
+    padding: 0 45px 18px 5px;
+    margin: 0 auto 20px;
+    width: 315px;
+    min-height: 201px;
+    position: relative;
+    
+  }
+  &__link{
+    font-size: 18px;
+    line-height: 20px;
+    @extend %sans-500;
+    color: #262626;
+  }
+  &__info{
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #222933;
+    @extend %rubik-400;
+    margin: 18px auto 0;
+    width: 315px;
+    display: flex;
+    justify-content: start;
+    padding:20px 5px 25px 0;
+}
+  &__date{
+    margin-right: 30px;
+  }
+  &__author{
+    text-transform: uppercase;
+    color: #222933;
+    @extend %rubik-400;
+  }
+  &__box{
+    position: relative;
+  }
+}

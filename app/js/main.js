@@ -75,6 +75,9 @@ $(".catalog-price__input").ionRangeSlider({
         
       });  
    
+$(".menu__btn").on('click', function(e){
+        $(".menu__list").toggleClass('menu__list--active');
+    });
 
 
 $(".catalog-category__input").on('click', function(e){

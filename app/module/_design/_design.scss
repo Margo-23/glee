@@ -1,0 +1,24 @@
+
+
+ul.design__items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 300px 140px;
+}
+.design{
+  &__item{
+    width: 340px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-position: 78% 55%;
+    margin-bottom: 90px;
+  }
+  &__item-title{
+    padding-top: 10px;
+    color: #191919;
+    @extend %sans-700;
+    font-size: 20px;
+    max-width: 184px
+  }
+}
