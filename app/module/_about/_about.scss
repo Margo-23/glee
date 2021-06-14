@@ -95,3 +95,130 @@
     color: #414141;
   }
 }
+
+@media (max-width: 1500px){
+  .about__slider::after {
+    right: 25px;
+  }
+  .about__item-info {
+    margin-right: 15px;
+}
+.about__item-title{
+  max-width: 400px;
+  font-size: 60px;
+}
+.slick-slide img{
+  width: 600px;
+}
+
+}
+
+@media (max-width: 1100px){
+  .about__item-wrapper{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about__item-wrapper{
+    margin-bottom: 120px;
+  }
+  .about__item-info{
+    margin-bottom: 50px;
+    margin-left: 50px;
+    }
+  .about__item-title{
+    max-width: 100%;
+  }
+  .about__item-text{
+    max-width: 100%;
+  }
+  .about__slider{
+    padding-top: 120px;
+  }
+  .slick-slide img {
+    margin: 0 auto;
+}
+
+.about__benefits-item,
+.about__benefits div:nth-child(1){
+  flex-direction: column;
+      max-width: 25%;
+      align-items: center;
+      text-align: center;
+  }
+  .about__benefits-icon{
+    margin: 0 0 20px 0;
+    height: 50px;
+    object-fit: contain;
+    }
+ 
+}
+
+@media (max-width: 900px){
+  .about__slider::after {
+    right: 20px;
+    top: 465px;
+  }
+  }
+
+  @media (max-width: 700px){
+    .slick-slide img{
+      width: 450px;
+    }
+    .about__item-wrapper{
+      margin-bottom: 75px;
+    }
+    .about__slider{
+      padding-top: 75px;
+    }
+    .about__item-title{
+      font-size: 46px;
+    }
+    .about__slider::after {
+      right: -50px;
+      top: 300px;
+      width: 300px;
+      height: 300px;
+    }
+    .about__item-info{
+      margin-bottom: 30px;
+      margin-left: 30px;
+      }
+    .about__item-link{
+      padding: 21px 80px 21px 28px;
+    }
+
+    .about__benefits-icon{
+      margin: 0 0 10px 0;
+      }
+      
+      .about__benefits{
+      flex-direction: column;
+      }
+      .about__benefits-item,
+      .about__benefits div:nth-child(1){
+          max-width: 100%;
+          margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 500px){
+      .about__item-wrapper{
+        margin-bottom: 50px;
+      }
+      .about__item-info{
+        margin-left: 25px;
+        }
+      .slick-slide img{
+        display: none;
+      }
+      .about__item-title{
+        font-size: 44px;
+      }
+      .about__item-text{
+        text-align: center;
+      }
+      .about__item-link{
+        padding: 21px 60px 21px 28px;
+      }
+      }
+

@@ -1,6 +1,5 @@
 .partners{
   padding: 65px 0 80px;
-
   &__img{
     padding: 0 50px;
   }
@@ -11,6 +10,44 @@ ul.partners__inner{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1170px;
+  width: 100%;
   padding: 0;
+}
+
+@media (max-width: 1500px){
+  .partners__img {
+    padding: 0 40px;
+}
+}
+
+@media (max-width: 1100px){
+  .partners {
+    padding: 65px 0 50px;
+    &__img {
+      padding: 0 30px;
+  }
+}
+}
+
+@media (max-width: 900px){
+  ul.partners__inner {
+    flex-wrap: wrap;
+  }
+  .partners {
+    padding: 50px 0 10px;
+    &__img {
+      padding: 20px 45px;
+  }
+}
+
+}
+
+@media (max-width: 700px){
+  .partners {
+    &__img {
+      padding: 20px 28px;
+      max-height: 90px
+  }
+}
+
 }
