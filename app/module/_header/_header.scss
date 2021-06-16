@@ -152,6 +152,7 @@
       left: 0;
       z-index: 100;
       transition: all .3s;
+      background-color: #fff;
       &.menu__list--active{
         transition: all .3s;
         transform: translateY(0);
