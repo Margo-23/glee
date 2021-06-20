@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 870px;
+  width: 100%;
   margin-left: 600px;
   padding-bottom: 125px;
 
@@ -40,3 +40,15 @@
   }
 
 }
+
+@media (max-width: 1500px){
+  .pagination{
+    padding-bottom: 100px;
+  }
+ }
+
+ @media (max-width: 900px){
+  .pagination{
+    padding-bottom: 50px;
+  }
+ }
