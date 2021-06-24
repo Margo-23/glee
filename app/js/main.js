@@ -19,6 +19,14 @@ $('.product-slide__thumb').slick({
     slidesToScroll: 1,
     vertical: true,
     draggable: false,
+    // responsive: [
+    //     {
+    //       breakpoint: 1100,
+    //       settings: {
+    //         vertical: false,
+    //       }
+    //     },
+    //     ]
 });
 $('.product-slide__big').slick({
     asNavFor: '.product-slide__thumb',
@@ -32,6 +40,27 @@ $('.related__slider').slick({
     slidesToScroll: 1,
     prevArrow: $('.related__btn-prew'),
     nextArrow: $('.related__btn-next'),
+        responsive: [
+        {
+          breakpoint: 1101,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+        breakpoint: 851,
+         settings: {
+          slidesToShow: 2,
+            }
+          },
+        {
+        breakpoint: 601,
+          settings: {
+            slidesToShow: 1,
+            arrows: true,
+            }
+        },  
+        ]
 });
 
 $(".catalog-price__input").ionRangeSlider({
@@ -75,6 +104,13 @@ $(".catalog-price__input").ionRangeSlider({
         
       });  
    
+$(".menu__btn").on('click', function(e){
+        $(".menu__list").toggleClass('menu__list--active');
+    });
+
+$(".catalog__filters-btn").on('click', function(e){
+        $(".catalog__filters").slideToggle();
+});
 
 
 $(".catalog-category__input").on('click', function(e){

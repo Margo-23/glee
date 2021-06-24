@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/product-list1.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+ {% include 'app/module/_header/_header.html' %}
+    <main class="main">
+
+      <section class="catalog">
+        <div class="container">
+          <h2 class="page-title">Product list 1</h2>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a  class="breadcrumbs__link" href="#">Home</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a  class="breadcrumbs__link" href="#">Product list 1</a>
+              </li>
+            </ul>
+          </div>
+          <div class="catalog__inner">
+          <button class="catalog__filters-btn"><img src="./images/icons/filter-solid.svg"></button>
+{% include 'app/module/_catalog/_catalog-list1.html' %}
+
+
+            <div class="catalog__content">
+{% include 'app/module/_products/_products-list1.html' %}
+            </div>
+
+          </div>
+{% include 'app/module/_pagination/_pagination.html' %}
+        </div>
+      </section>
+
+{% include 'app/module/_partners/_partners.html' %}
+
+    </main>
+
+
+{% include 'app/module/_footer/_footer.html' %}
+
+    <script src="./js/main.min.js"></script>
+  </body>
+</html>
