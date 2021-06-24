@@ -1,5 +1,5 @@
 .related{
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto 35px;
   position: relative;
   &__btn-box{
@@ -34,4 +34,43 @@
   &__item{
     max-width: 270px;
   }
+}
+
+@media (max-width: 1500px){
+  .related {
+    padding: 0 20px;
+    &__title{
+      margin-bottom: 60px;
+    }
+    .slick-slide {
+      text-align: center;
+  }
+}
+}
+
+@media (max-width: 1100px){
+  .related {
+    &__btn-box{
+      right: 15px;
+    }
+}
+}
+
+@media (max-width: 700px){
+  .related {
+    &__title{
+      font-size: 32px;
+    }
+}
+}
+@media (max-width: 500px){
+  .related {
+    &__title{
+      font-size: 24px;
+      text-align: center;
+    }
+    &__btn-box{
+      display: none;
+    }
+}
 }
